@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taste House | مطعمك المفضل</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            🍔 Taste House
+        </div>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#menu">المنيو</a>
+            <a href="#about">عن المطعم</a>
+            <a href="#contact">تواصل معنا</a>
+            <a href="#cart">🛒 السلة</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">
+                🍔 Welcome to Taste House
+            </span>
+
+            <h1>
+                الطعم اللي<br>
+                <span>هتحبه من أول مرة</span>
+            </h1>
+
+            <p>
+                أكل طازج، جودة عالية، وطعم يستاهل التجربة.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="main-btn">
+                    شوف المنيو
+                </a>
+
+                <button onclick="orderNow()" class="whatsapp-btn">
+                    اطلب الآن 💬
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu -->
+    <section id="menu" class="menu-section">
+
+        <div class="section-title">
+
+            <span>OUR MENU</span>
+
+            <h2>
+                أشهر أطباقنا
+            </h2>
+
+            <p>
+                اختار أكلك المفضل واستمتع بأفضل طعم.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- Classic Burger -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1724352476668-6cbd99da2d6b?fm=jpg&q=80&w=1200"
+                    alt="Classic Burger">
+
+                <div class="card-content">
+
+                    <span class="category">
+                        BURGER
+                    </span>
+
+                    <h3>
+                        Classic Burger
+                    </h3>
+
+                    <p>
+                        برجر لحم مع الجبنة والخس والطماطم وصوص خاص.
+                    </p>
+
+                    <div class="price">
+                        150 جنيه
+                    </div>
+
+                    <button
+                        class="order-btn"
+                        onclick="addToCart('Classic Burger', 150)">
+                        اطلب الآن 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chicken Burger -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80"
+                    alt="Chicken Burger">
+
+                <div class="card-content">
+
+                    <span class="category">
+                        CHICKEN
+                    </span>
+
+                    <h3>
+                        Chicken Burger
+                    </h3>
+
+                    <p>
+                        برجر فراخ مقرمش مع الجبنة والخضار والصوص.
+                    </p>
+
+                    <div class="price">
+                        130 جنيه
+                    </div>
+
+                    <button
+                        class="order-btn"
+                        onclick="addToCart('Chicken Burger', 130)">
+                        اطلب الآن 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+                    alt="Cheese Pizza">
+
+                <div class="card-content">
+
+                    <span class="category">
+                        PIZZA
+                    </span>
+
+                    <h3>
+                        Cheese Pizza
+                    </h3>
+
+                    <p>
+                        بيتزا بالجبنة والخضار بطعم مميز.
+                    </p>
+
+                    <div class="price">
+                        180 جنيه
+                    </div>
+
+                    <button
+                        class="order-btn"
+                        onclick="addToCart('Cheese Pizza', 180)">
+                        اطلب الآن 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart -->
+    <section id="cart" class="cart-section">
+
+        <div class="cart">
+
+            <span class="category">
+                YOUR ORDER
+            </span>
+
+            <h2>
+                🛒 سلة الطلبات
+            </h2>
+
+            <div id="cart-items">
+
+                <p class="empty-cart">
+                    السلة فارغة حاليًا 🛒
+                </p>
+
+            </div>
+
+            <div class="cart-bottom">
+
+                <p id="cart-total">
+                    الإجمالي: 0 جنيه
+                </p>
+
+                <button
+                    class="checkout-btn"
+                    onclick="checkout()">
+                    تأكيد الطلب عبر WhatsApp 💬
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <div>
+
+            <span class="category">
+                ABOUT US
+            </span>
+
+            <h2>
+                طعم مختلف<br>
+                وجودة تستحق التجربة
+            </h2>
+
+            <p>
+                في Taste House بنهتم بكل تفصيلة،
+                من اختيار المكونات لحد تقديم الأكل ليك.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <span>
+            GET IN TOUCH
+        </span>
+
+        <h2>
+            جاهز تطلب؟
+        </h2>
+
+        <p>
+            تواصل معنا الآن واحصل على طلبك.
+        </p>
+
+        <button
+            onclick="orderNow()"
+            class="whatsapp-btn">
+            اطلب عبر WhatsApp 💬
+        </button>
+
+        <p class="phone">
+            📞 01094065254
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>
+            🍔 Taste House
+        </h3>
+
+        <p>
+            © 2026 Taste House. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
